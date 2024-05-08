@@ -20,10 +20,26 @@ let Identity = {
     age: 21,          // Object
     height: 6
 }
-console.log(Identity)
+// console.log(Identity)
 
 const MyFunction = function(){
-    console.log("Hello World")
+    // console.log("Hello World")
 }
 
+// stack (premitive datatype)  Heap(Non-premitive datatype)
 
+let EmailAdress = "saniad@gmail.com"
+let AdressTwo = EmailAdress
+
+console.log(AdressTwo)
+console.log(EmailAdress)
+
+let EmailOne = {
+    email : "Saniad1@gmail.com"
+}
+
+let EmailTwo = EmailOne 
+EmailTwo.email = "Anupam@gmail.com"
+
+console.log(EmailOne)
+console.log(EmailTwo)
