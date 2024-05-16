@@ -16,3 +16,14 @@ console.log(typeof myDate);
 // 4:40:22 PM
 // 2024-05-15T16:40:22.903Z
 // object
+
+console.log(myDate.getDate())
+console.log(myDate.getDay())
+console.log(myDate.getMonth())
+console.log(myDate.getTime())
+
+
+// 15
+// 3
+// 4
+// 1715793625956
