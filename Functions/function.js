@@ -13,7 +13,6 @@ function userName(username){
 function userName(username){
     if(username == undefined){
         // console.log("Please enter a username")
-        return
     }
     return `${username} you are a good Boy`
 }
