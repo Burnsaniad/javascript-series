@@ -140,3 +140,72 @@ let customers = [
   });
   console.log('[find] Last Found Young Customer(Age < 10): ', lastFoundYoungCustomer);
 }
+
+// every() method
+{
+  const isThereWindowShopper = customers.every((customer) => {
+      return (customer.purchased.length === 0);
+  })
+  console.log('[every] Everyone a window shopper?', isThereWindowShopper);
+}
+
+// entries() method
+{
+  for (const value of numbers.entries()) {
+    console.log(value)
+  }
+}
+
+// values() method
+{
+  for (const value of numbers.values()) {
+    console.log(value)
+  }
+}
+
+// flatMap() method
+{
+  const arr1 = [1, 2, 3, 4];
+  arr1.map(item => item *2);
+  arr1.flatMap(item => item *2);
+
+  arr1.map(item => [item *2]);
+  arr1.flatMap(item => [item *2]);
+
+  arr1.map(item => [[item *2]]);
+  arr1.flatMap(item => [[item *2]])
+}
+
+// reduceRight() method
+{
+  let number = [100, 40, 15];
+
+  number.reduceRight((accumulator, current) => {
+      return accumulator - current
+  });
+}
+
+// Array method Chaining
+{
+  const marriedCustomers = customers.filter((customer) => {
+    return (customer.married);
+  });
+
+  const expenseMapped = marriedCustomers.map((marriedCustomer) => {
+    return marriedCustomer.expense;
+  });
+
+  const totalExpenseMarriedCustomer = expenseMapped.reduce(
+    (accum, expense) => {
+    return accum + expense;
+   }, 0);
+   console.log('Total Expense of Married Customers in INR: '
+   , totalExpenseMarriedCustomer);
+
+  // After Chining them
+  const total = customers
+                   .filter(customer => customer.married)
+                   .map(married => married.expense)
+                   .reduce((accum,expense) => accum + expense);
+  console.log('Orchestrated total expense in INR: ', total);
+}
