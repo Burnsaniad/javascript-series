@@ -65,8 +65,6 @@ console.log(names2)
 
                             // The sort() array method
 
-
-
 let artists = [
     'John White Abbott', 
     'Leonardo da Vinci', 
