@@ -1,5 +1,3 @@
-// Task-21
-// Can you filter employees who work in the "Engineering" department?
 const employees = [
   { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
   { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
@@ -19,6 +17,8 @@ const departments = [
   { id: 4, name: "Sales" },
 ];
 
+// Task-21
+// Can you filter employees who work in the "Engineering" department?
 const employeesInEngineering = employees.filter(employee => employee.departmentId === departments.find(({name}) => name === "Engineering").id);
 console.log(employeesInEngineering);
 
@@ -48,3 +48,32 @@ const highEarners = employees.filter(employee => {
     return employee.salary > 6000;
 });
 
+// Task-26
+// Create an array of employee names only.
+const employeeNames = employees.map(employee => employee.name);
+console.log(employeeNames);
+
+// Task-27
+// Calculate the total salary of all employees using reduce.
+const totalSalary = employees.reduce((acc, employee) => {
+  return acc + employee.salary
+}, 0);
+console.log(totalSalary);
+
+// Task-28
+// Is there any employee earning less than 5000?
+const hasLowEarners = employees.some(employee => {
+  return employee.salary < 5000;
+})
+console.log(hasLowEarners);
+
+// Task-29
+// Find the first employee who earns exactly 5100.
+const firstEarning5100 = employees.find(employee => employee.salary === 5100);
+console.log(firstEarning5100);
+
+// Task-30
+// Find the last employee in the "HR" department.
+const findHR = departments.find(({name}) => name === "HR")
+const lastInHR = employees.filter(employee => employee.departmentId === findHR.id).pop();
+console.log(lastInHR);
