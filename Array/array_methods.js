@@ -32,7 +32,7 @@ colors.fill('pink'); // 📌 replace all the elements with 'pink'
 
 const colors1 = ['red', 'blue', 'green']; 
 
-colors1.fill('pink', 1,3); // ["red", "pink", "pink"] 📌 .fill(replace, st_idx, lt_idx)
+colors1.fill('pink', 1,3); // ["red", "pink", "pink"] 📌 .fill(replace_item, st_idx, lt_idx)
 
 
                             // array includes method
@@ -46,8 +46,8 @@ names.includes('july'); // false
 
 const names0 = ['tom', 'alex', 'bob', 'john'];
 
-names.indexOf('alex'); // 1
-names.indexOf('rob'); // -1
+names0.indexOf('alex'); // 1
+names0.indexOf('rob'); // -1
 
 
 const names1 = ['tom', 'alex', 'bob', 'tom'];
